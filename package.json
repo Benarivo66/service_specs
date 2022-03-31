@@ -1,0 +1,23 @@
+{
+  "name": "service_specs",
+  "version": "1.0.0",
+  "description": "specification for services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthony-deca/service_specs.git"
+  },
+  "author": "Anthony Izekor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anthony-deca/service_specs/issues"
+  },
+  "homepage": "https://github.com/anthony-deca/service_specs#readme",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.5.9",
+    "@grpc/proto-loader": "^0.6.9"
+  }
+}

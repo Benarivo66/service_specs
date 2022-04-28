@@ -6,6 +6,7 @@ service UserServiceRoutes {
     rpc login (UserLoginInfo) returns (User) {}
     rpc getAll (GetAllArgs) returns (UserList) {}
     rpc getOne (UserId) returns (User) {}
+    rpc deleteOne (UserId) returns (User) {}
 }
 
 message UserLoginInfo {

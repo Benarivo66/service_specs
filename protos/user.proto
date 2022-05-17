@@ -7,6 +7,7 @@ service UserServiceRoutes {
     rpc getAll (GetAllArgs) returns (UserList) {}
     rpc getOne (UserId) returns (User) {}
     rpc deleteOne (UserId) returns (User) {}
+    rpc update (UpdateUserArgs) returns (User) {}
 }
 
 message UserLoginInfo {
@@ -15,6 +16,12 @@ message UserLoginInfo {
 }
 
 message GetAllArgs {}
+
+message UpdateUserArgs {
+    string _id = 1;
+    string email = 2;
+    bool isAdmin = 3;
+}
 
 message UserList {
     repeated User users = 1;

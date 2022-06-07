@@ -8,11 +8,15 @@ service UserServiceRoutes {
     rpc getOne (UserId) returns (User) {}
     rpc deleteOne (UserId) returns (User) {}
     rpc update (UpdateUserArgs) returns (User) {}
+    rpc getContestants (GetAllArgs) returns (UserList) {}
+    rpc getTopRankings (GetAllArgs) returns (UserList) {}
 }
 
 message UserLoginInfo {
     string email = 1;
     string password = 2;
+    string name = 3;
+    int32 age = 4;
 }
 
 message GetAllArgs {}
@@ -20,7 +24,12 @@ message GetAllArgs {}
 message UpdateUserArgs {
     string _id = 1;
     string email = 2;
-    bool isAdmin = 3;
+    string name = 3;
+    string age = 4;
+    bool isAdmin = 5;
+    bool isContestant = 6;
+    string description = 7;
+    int32 contestantNumber = 8;
 }
 
 message UserList {
@@ -34,9 +43,16 @@ message UserId {
 message User {
     string email = 1;
     string password = 2;
-    string token = 3;
-    bool deleted = 4;
-    bool isAdmin = 5;
+    string name = 3;
+    int32 age = 4;
+    string token = 5;
+    bool deleted = 6;
+    bool isAdmin = 7;
+    bool isContestant = 8;
+    int32 numOfVotes = 9;
+    int32 contestantNumber = 10;
+    string description = 11;
+    string _id = 12;
 }
 
 

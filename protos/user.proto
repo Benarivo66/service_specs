@@ -10,6 +10,7 @@ service UserServiceRoutes {
     rpc update (UpdateUserArgs) returns (User) {}
     rpc getContestants (GetAllArgs) returns (UserList) {}
     rpc getTopRankings (GetAllArgs) returns (UserList) {}
+    rpc logout (GetAllArgs) returns (logoutType) {}
 }
 
 message UserLoginInfo {
@@ -53,6 +54,10 @@ message User {
     int32 contestantNumber = 10;
     string description = 11;
     string _id = 12;
+}
+
+message logoutType {
+    string message = 1;
 }
 
 
